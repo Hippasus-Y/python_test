@@ -11,6 +11,7 @@ def solution(name):
             cc += listB.index(c)+1
     listN = list(name[1:])
     listM = list(reversed(listN))
+    
     cpn = 0; cpm = 0
     c_pn = 0; c_pm = 0
     for n in listN:
@@ -23,6 +24,7 @@ def solution(name):
         if m != 'A':
             cpm += c_pm
             c_pm = 0
+            
     maxA = ''
     for i in range(1,21):
         if 'A'*i in name:
@@ -38,7 +40,7 @@ def solution(name):
         btof = bi*2 + fi
         cp = min(cpn, cpm, ftob, btof)
     else:
-        cp = min(cpn,cpm)
+        cp = min(cpn, cpm)
     print(cc,cp)
     answer = cc + cp
     return answer
