@@ -11,8 +11,6 @@ def solution(begin, target, words):
             matched = [wo for wo in words if re.match(pattern, wo)]
             listW.extend([wor for wor in matched if wor != word])
         connected[word] = listW
-        
-    print(connected)
     
     from collections import deque
     check = deque([begin])
